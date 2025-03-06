@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nsquare_barber_project/core/helpers/spacing.dart';
 import '../../../../../core/theming/colors.dart';
@@ -15,7 +16,7 @@ class HomeTopBar extends StatelessWidget {
           children: [
             Text(
               "Hi, Riya Gautam",
-              style: TextStyles.font16DarkBlueBold,
+              style: TextStyles.font16WhiteMedium,
             ),
             verticalSpace(2),
             RichText(
@@ -30,7 +31,7 @@ class HomeTopBar extends StatelessWidget {
                   ),
                   TextSpan(
                     text: " Delhi, India",
-                    style: TextStyles.font12DarkBlueRegular,
+                    style: TextStyles.font14WhiteRegular,
                   ),
                 ],
               ),
@@ -39,10 +40,10 @@ class HomeTopBar extends StatelessWidget {
         ),
         const Spacer(),
         CircleAvatar(
-          radius: 24.0,
-          backgroundColor: ColorsManager.moreLighterGray,
+          radius: 20.0.r,
+          backgroundColor: const Color.fromARGB(255, 28, 28, 28),
           child: SvgPicture.asset(
-            'assets/svgs/notification.svg',
+            'assets/svgs/bell.svg',
           ),
         )
       ],

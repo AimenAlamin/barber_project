@@ -37,18 +37,7 @@ class _MainViewState extends State<MainView> {
         },
       ),
       backgroundColor: Colors.white,
-      body: SafeArea(
-        child: Container(
-          width: double.infinity,
-          margin: EdgeInsets.fromLTRB(
-            20.0.r,
-            16.0.r,
-            20.0.r,
-            28.0.r,
-          ),
-          child: screens[currentViewIndex], // Only renders the selected screen
-        ),
-      ),
+      body: screens[currentViewIndex],
     );
   }
 }

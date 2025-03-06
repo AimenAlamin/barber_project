@@ -10,7 +10,7 @@ class AppTextFormField extends StatelessWidget {
   final InputBorder? enabledBorder;
   final TextStyle? inputTextStyle;
   final TextStyle? hintStyle;
-  final String hintText;
+  final String? hintText;
   final bool? isObscureText;
   final Widget? suffixIcon;
   final Widget? prefixIcon;
@@ -33,7 +33,7 @@ class AppTextFormField extends StatelessWidget {
     this.enabledBorder,
     this.inputTextStyle,
     this.hintStyle,
-    required this.hintText,
+    this.hintText,
     this.isObscureText,
     this.suffixIcon,
     this.prefixIcon,
@@ -64,7 +64,7 @@ class AppTextFormField extends StatelessWidget {
         focusedBorder: focusedBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
-                color: ColorsManager.gray,
+                color: Colors.black,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(16.0),
@@ -72,7 +72,7 @@ class AppTextFormField extends StatelessWidget {
         enabledBorder: enabledBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
-                color: ColorsManager.lighterGray,
+                color: Colors.black,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(16.0),
@@ -96,26 +96,29 @@ class AppTextFormField extends StatelessWidget {
         suffixIcon: suffixIcon,
         // Here we combine prefixIcon and prefixText
         prefixIcon: prefixIcon != null || prefixText != null
-            ? Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  if (prefixIcon != null) prefixIcon!,
-                  if (prefixText != null)
-                    Padding(
-                      padding: const EdgeInsets.only(left: 4.0),
-                      child: Text(
-                        prefixText!,
-                        style: prefixStyle ?? TextStyles.font14DarkBlueMedium,
+            ? Padding(
+                padding: EdgeInsets.all(10.0.r),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    if (prefixIcon != null) prefixIcon!,
+                    if (prefixText != null)
+                      Padding(
+                        padding: const EdgeInsets.only(left: 4.0),
+                        child: Text(
+                          prefixText!,
+                          style: prefixStyle ?? TextStyles.font14WhiteRegular,
+                        ),
                       ),
-                    ),
-                ],
+                  ],
+                ),
               )
             : null,
         fillColor: backgroundColor ?? ColorsManager.moreLightGray,
         filled: true,
       ),
       obscureText: isObscureText ?? false,
-      style: TextStyles.font14DarkBlueMedium,
+      style: TextStyles.font14WhiteRegular,
       validator: (value) {
         return validator!(value);
       },

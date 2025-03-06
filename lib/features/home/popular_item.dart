@@ -99,22 +99,17 @@ class PopularItem extends StatelessWidget {
                 Row(
                   children: [
                     Expanded(
-                      child: OutlinedButton(
-                        onPressed: () {},
-                        style: OutlinedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.r),
-                          ),
-                        ),
-                        child: Text("Book Now",
-                            style: TextStyles.font12BlueRegular),
-                      ),
+                      child: AppTextButton(
+                          backgroundColor: Colors.white,
+                          buttonText: "Book Now",
+                          textStyle: const TextStyle(color: Colors.blue),
+                          onPressed: () {}),
                     ),
                     horizontalSpace(5),
                     Expanded(
                       child: AppTextButton(
                           buttonText: "View Details",
-                          textStyle: TextStyle(color: Colors.white),
+                          textStyle: const TextStyle(color: Colors.white),
                           onPressed: () {}),
                     ),
                   ],

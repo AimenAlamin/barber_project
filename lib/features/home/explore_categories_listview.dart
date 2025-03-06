@@ -11,11 +11,10 @@ class ExploreCategoriesListView extends StatelessWidget {
   Widget build(BuildContext context) {
     // Predefined list of categories with corresponding icons
     final categories = [
-      {"name": "Haircuts", "icon": "assets/svgs/hammer.svg"},
-      {"name": "Haircuts", "icon": "assets/svgs/hammer.svg"},
-      {"name": "Haircuts", "icon": "assets/svgs/hammer.svg"},
-      {"name": "Haircuts", "icon": "assets/svgs/hammer.svg"},
-      {"name": "Haircuts", "icon": "assets/svgs/hammer.svg"},
+      {"name": "Haircuts", "icon": "assets/svgs/tabler-icon-scissors.svg"},
+      {"name": "Coloring", "icon": "assets/svgs/brush.svg"},
+      {"name": "Shampoo", "icon": "assets/svgs/hammer.svg"},
+      {"name": "More", "icon": "assets/svgs/layout-grid-add.svg"},
     ];
 
     return SizedBox(
@@ -28,7 +27,7 @@ class ExploreCategoriesListView extends StatelessWidget {
           return GestureDetector(
             onTap: () {},
             child: Padding(
-              padding: EdgeInsetsDirectional.only(start: index == 0 ? 0 : 24.w),
+              padding: EdgeInsetsDirectional.only(start: index == 0 ? 0 : 40.w),
               child: Column(
                 children: [
                   CircleAvatar(

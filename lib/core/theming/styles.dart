@@ -56,6 +56,11 @@ class TextStyles {
     fontWeight: FontWeightHelper.semiBold,
     color: Colors.white,
   );
+  static TextStyle font14WhiteRegular = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: Colors.white,
+  );
 
   static TextStyle font13GrayRegular = TextStyle(
     fontSize: 13.sp,
