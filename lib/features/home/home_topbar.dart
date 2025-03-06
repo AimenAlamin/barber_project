@@ -13,21 +13,29 @@ class HomeTopBar extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
-              height: 70.0,
-              width: 70.0,
-              child: Image.asset("assets/images/splashImg.png"),
+            Text(
+              "Hi, Riya Gautam",
+              style: TextStyles.font16DarkBlueBold,
+            ),
+            verticalSpace(2),
+            RichText(
+              text: TextSpan(
+                children: [
+                  const WidgetSpan(
+                    child: Icon(
+                      Icons.location_on,
+                      color: ColorsManager.mainBlue,
+                      size: 16,
+                    ),
+                  ),
+                  TextSpan(
+                    text: " Delhi, India",
+                    style: TextStyles.font12DarkBlueRegular,
+                  ),
+                ],
+              ),
             ),
           ],
-        ),
-        Text(
-          "Hi, Riya Gautam",
-          style: TextStyles.font16DarkBlueBold,
-        ),
-        verticalSpace(1),
-        Text(
-          "Delhi, India",
-          style: TextStyles.font12DarkBlueRegular,
         ),
         const Spacer(),
         CircleAvatar(

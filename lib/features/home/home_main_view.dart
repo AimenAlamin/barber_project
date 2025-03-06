@@ -9,7 +9,6 @@ import 'message_view.dart';
 import 'navigationbar/custom_bottom_navbar.dart';
 
 class MainView extends StatefulWidget {
-  //my main screen/view which contains the bottom navigation bar and their screens/
   const MainView({super.key});
 
   @override
@@ -19,13 +18,22 @@ class MainView extends StatefulWidget {
 class _MainViewState extends State<MainView> {
   int currentViewIndex = 0;
 
+  final List<Widget> screens = const [
+    HomeView(),
+    ExploreView(),
+    BookingView(),
+    MessageView(),
+    AccountView(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CustomBottomNavbar(
         onItemTapped: (index) {
-          currentViewIndex = index;
-          setState(() {});
+          setState(() {
+            currentViewIndex = index;
+          });
         },
       ),
       backgroundColor: Colors.white,
@@ -38,17 +46,7 @@ class _MainViewState extends State<MainView> {
             20.0.r,
             28.0.r,
           ),
-          child: IndexedStack(
-            //indexed stack is used to show the current view index without losing the state of the previous view to avoid rebuilding the view
-            index: currentViewIndex,
-            children: const [
-              HomeView(),
-              ExploreView(),
-              BookingView(),
-              MessageView(),
-              AccountView(),
-            ],
-          ),
+          child: screens[currentViewIndex], // Only renders the selected screen
         ),
       ),
     );
