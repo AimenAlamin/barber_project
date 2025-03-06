@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'account_view.dart';
 import 'booking_view.dart';
 import 'explore_view.dart';
