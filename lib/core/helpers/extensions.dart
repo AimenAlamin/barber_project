@@ -1,26 +1,20 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-extension Navigation on BuildContext {
-  Future<dynamic> pushNamed(String routeName, {Object? arguments}) {
-    return Navigator.of(this).pushNamed(routeName, arguments: arguments);
+extension NavigationExtension on BuildContext {
+  void pop() => GoRouter.of(this).pop();
+  
+  void pushNamed(String routeName) => GoRouter.of(this).push(routeName);
+  
+  void goNamed(String routeName) => GoRouter.of(this).go(routeName);
+  
+  void pushNamedWithParams(String routeName, Map<String, dynamic> params) {
+    GoRouter.of(this).push(routeName, extra: params);
   }
-
-  Future<dynamic> pushReplacementNamed(String routeName, {Object? arguments}) {
-    return Navigator.of(this)
-        .pushReplacementNamed(routeName, arguments: arguments);
-  }
-
-  Future<dynamic> pushNamedAndRemoveUntil(String routeName,
-      {Object? arguments, required RoutePredicate predicate}) {
-    return Navigator.of(this)
-        .pushNamedAndRemoveUntil(routeName, predicate, arguments: arguments);
-  }
-
-  void pop() => Navigator.of(this).pop();
 }
 
 extension StringExtension on String? {
-  bool isNullOrEmpty() => this == null || this == "";
+  bool get isNullOrEmpty => this == null || this!.isEmpty;
 }
 
 extension ListExtension<T> on List<T>? {

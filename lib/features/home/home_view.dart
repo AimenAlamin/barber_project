@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../core/helpers/image_sliding.dart';
-import '../../core/helpers/spacing.dart';
+import '../common_widgets/image_sliding.dart';
+import '../common_widgets/spacing.dart';
 import 'explore_categories_listview.dart';
 import 'home_topbar.dart';
 import 'popular_item.dart';
-import 'search_textfield.dart';
-import 'see_all.dart';
+import '../common_widgets/search_textfield.dart';
+import '../common_widgets/see_all.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});

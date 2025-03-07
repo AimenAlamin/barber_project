@@ -1,4 +1,4 @@
-import '../colors.dart';
+import '../../core/theming/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -35,7 +35,7 @@ class AppTextButton extends StatelessWidget {
             side: const BorderSide(color: Colors.blue),
           ),
         ),
-        backgroundColor: WidgetStatePropertyAll(
+        backgroundColor: WidgetStateProperty.all(
           backgroundColor ?? ColorsManager.mainBlue,
         ),
         padding: WidgetStateProperty.all<EdgeInsets>(

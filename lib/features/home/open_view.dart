@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lucide_icons/lucide_icons.dart';
-import 'package:nsquare_barber_project/core/helpers/spacing.dart';
+import 'package:go_router/go_router.dart';
+import '../common_widgets/spacing.dart';
 
 class OpenView extends StatefulWidget {
   const OpenView({super.key});
@@ -94,7 +95,7 @@ class _OpenViewState extends State<OpenView> {
                       child: IconButton(
                         icon: const Icon(LucideIcons.arrowLeft,
                             color: Colors.white),
-                        onPressed: () => Navigator.pop(context),
+                        onPressed: () => context.pop(),
                       ),
                     ),
                     Container(

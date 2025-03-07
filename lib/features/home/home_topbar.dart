@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:nsquare_barber_project/core/helpers/spacing.dart';
+import 'package:nsquare_barber_project/features/common_widgets/spacing.dart';
 import '../../../../../core/theming/colors.dart';
 import '../../core/theming/styles.dart';
 

@@ -4,27 +4,24 @@ import 'package:flutter/material.dart';
 
 import 'core/routing/app_router.dart';
 
-import 'core/routing/routes.dart';
 import 'core/theming/colors.dart';
 
 class BarberApp extends StatelessWidget {
-  final AppRouter appRouter;
-  const BarberApp({super.key, required this.appRouter});
+  const BarberApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       minTextAdapt: true,
-      child: MaterialApp(
+      child: MaterialApp.router(
         title: "BarberApp",
         theme: ThemeData(
           primaryColor: ColorsManager.mainBlue,
           scaffoldBackgroundColor: Colors.white,
         ),
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.mainView,
-        onGenerateRoute: appRouter.generateRoute,
+        routerConfig: AppRouter.router,
       ),
     );
   }
