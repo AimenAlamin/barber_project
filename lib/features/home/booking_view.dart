@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BookingView extends StatefulWidget {
   const BookingView({super.key});
@@ -126,8 +127,7 @@ class _BookingCard extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
                   decoration: BoxDecoration(
                     color: const Color.fromARGB(255, 36, 231, 130),
                     borderRadius: BorderRadius.circular(12),
